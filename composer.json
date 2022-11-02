@@ -2,6 +2,7 @@
     "name": "spreader/handler",
     "type": "project",
     "require": {},
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Spreader\\Handler\\": "src/"
