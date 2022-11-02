@@ -10,7 +10,14 @@ class FoundationServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        dd(12);
+        $this->publishes([
+            __DIR__.'/../../config/spreader.php' => config_path('spreader.php'),
+        ]);
+    }
+
+    public function register()
+    {
         $this->app->bind(ExceptionHandler::class, Handler::class);
+        parent::register();
     }
 }

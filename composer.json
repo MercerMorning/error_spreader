@@ -1,8 +1,6 @@
 {
     "name": "spreader/handler",
     "type": "project",
-    "require": {},
-    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Spreader\\Handler\\": "src/"
@@ -11,14 +9,12 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spreader\\Handler\\Providers\\FoundationServiceProvider"
+                "FoundationServiceProvider"
             ]
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/MercerMorning/error_spreader"
-        }
-    ]
+    "require": {
+        "laravel/framework": "^8.12",
+        "sentry/sentry-laravel": "^2.3"
+    }
 }
